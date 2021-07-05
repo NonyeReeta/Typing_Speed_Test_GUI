@@ -10,7 +10,7 @@ def get_words():
     random_string = ""
     """number of random words to be displayed"""
     n = 0
-    while n < 100:
+    while n < 60:
         random_string += f"{random.choice(words_test)} "
         n += 1
     """Tweaking the random_words strings so it fits in the canvas"""
@@ -78,7 +78,7 @@ welcome_label.config(text="Hello!\nThis app calculates your typing speed per min
 welcome_label.grid(row=0, column=1)
 
 word_bg = Canvas(width=700, height=300, bg="light blue")
-display_words = word_bg.create_text(350, 150, text=current_words, font=("Arial", 17, "italic"), fill="black")
+display_words = word_bg.create_text(350, 150, text=current_words, font=("Arial", 18, "italic"), fill="black")
 word_bg.grid(row=1, column=1)
 
 instruction_label = Label()
