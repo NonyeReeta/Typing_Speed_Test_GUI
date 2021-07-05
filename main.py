@@ -25,7 +25,7 @@ def start_timer(self):
     """configure the entry widget to allow input on click"""
     user_input.config(state=NORMAL)
     """sets timer to 60secs"""
-    window.after(6000, func=calc_speed)
+    window.after(60000, func=calc_speed)
 
 
 def calc_speed():
