@@ -18,6 +18,7 @@ def get_words():
     return random_words
 
 
+"""setting variable for current words to be displayed in the canvas"""
 current_words = get_words()
 
 
@@ -33,6 +34,7 @@ def calc_speed():
     """collects the user input and convert to a list. same for the text words"""
     input_list = list(user_input.get().split(" "))
     random_list = list(current_words.split(" "))
+    print(random_list)
     """initialising list of words the users gets right or wrong"""
     wrong_words = []
     right_words = []
@@ -47,8 +49,9 @@ def calc_speed():
             n += 1
         elif word == input_list[-1]:
             n = 0
+            """ Removes initial text and display new one"""
             word_bg.itemconfig(display_words, text=current_words)
-
+    """calculating speed, change window and display accuracy"""
     word_count = len(right_words)
     typing_speed = (word_count / 5) * 1
     instruction_label.destroy()
@@ -63,8 +66,10 @@ def calc_speed():
 
 
 def try_again():
-    new_words = get_words()
-    word_bg.itemconfig(display_words, text=new_words)
+    """restart gui"""
+    # new_words = get_words()
+    # word_bg.itemconfig(display_words, text=new_words)
+    pass
 
 
 window = Tk()
